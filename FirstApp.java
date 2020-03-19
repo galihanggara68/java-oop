@@ -23,5 +23,9 @@ public class FirstApp {
 		
 		System.out.println("Setelah Makan");
 		System.out.println("Sedang Lapar : " + person.isSedangLapar());
+
+		person.makan("Bakso");
+		String kataKata = person.berbicaraSatuKata("Makan");
+		System.out.println(kataKata);
 	}
 }
