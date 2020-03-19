@@ -6,7 +6,7 @@ public class Person {
 	private String warnaKulit;
 	private double tinggiBadan;
 	
-	public String nama;
+	protected String nama;
 	
 	// State
 	private boolean sedangLapar; // True | False
@@ -65,18 +65,32 @@ public class Person {
 	}
 
 	// Methods usually public
-	public void makan() {
+	public void makan(String makanan) {
+		System.out.println("Makan " + makanan);
 		sedangLapar = false;
 		tekananDarah = 142.2;
 		detakJantung = 110;
 		fit = 90;
 	}
 	
-	public void berjemur() {
-		System.out.println("Orang Berjemur");
+	public void berjemur(int lamanya) {
+		System.out.println("Orang Berjemur Selama " + lamanya);
+		sedangLapar = true;
+		warnaKulit = "Sawo Gosong";
+		fit = 100;
 	}
 	
-	public void jalan() {
-		System.out.println("Orang Jalan");
+	public String berbicara(String[] kataKata) {
+		String mengucapkan = "";
+		for(int i = 0; i < kataKata.length; i++) {
+			mengucapkan += kataKata[i];
+		}
+		return mengucapkan;
 	}
+	
+	public String berbicaraSatuKata(String kata) {
+		return "Berbicara " + kata;
+	}
+	
+	
 }
