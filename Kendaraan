@@ -1,8 +1,18 @@
 package first;
 
-public class Kendaraan {
+interface BahanBakar{
+	
+}
+
+class Bensin implements BahanBakar{}
+
+class Avtur implements BahanBakar{}
+
+class Premium implements BahanBakar{}
+
+public class Kendaraan implements BaseKendaraan{
 	// State
-	protected double bahanBakar;
+	protected BahanBakar bahanBakar;
 	protected double kecepatan;
 	
 	public static int jumlahKendaraan;
@@ -15,14 +25,14 @@ public class Kendaraan {
 	// Default return type -> void
 	public Kendaraan() {
 		jumlahKendaraan += 1;
-		bahanBakar = 100;
+		//bahanBakar = 100;
 		kecepatan = 0;
 		
 		mesin = "V8";
 	}
 	
 	public Kendaraan(String mesin) {
-		bahanBakar = 100;
+		//bahanBakar = 100;
 		kecepatan = 0;
 		
 		this.mesin = mesin;
@@ -32,11 +42,11 @@ public class Kendaraan {
 		
 	}
 	
-	public double getBahanBakar() {
+	public BahanBakar getBahanBakar() {
 		return bahanBakar;
 	}
 
-	public void setBahanBakar(double bahanBakar) {
+	public void setBahanBakar(BahanBakar bahanBakar) {
 		this.bahanBakar = bahanBakar;
 	}
 
@@ -60,38 +70,41 @@ public class Kendaraan {
 		return kecepatan;
 	}
 
+	@Override
 	public void berjalan() {
-		bahanBakar -= 10;
+		//bahanBakar -= 10;
 		kecepatan += 10;
+		System.out.println("Kendaraan Berjalan");
 	}
 	
-	// Overload
+	@Override
 	public void berjalan(String arah) {
-		bahanBakar -= 10;
+		//bahanBakar -= 10;
 		kecepatan += 10;
 		System.out.println("Berjalan ke arah " + arah);
 	}
 	
 	public void berjalan(int arah) {
-		bahanBakar -= 10;
+		//bahanBakar -= 10;
 		kecepatan += 10;
 		System.out.println("Berjalan ke arah I " + arah);
 	}
 	
 	public void berjalan(float arah) {
-		bahanBakar -= 10;
+		//bahanBakar -= 10;
 		kecepatan += 10;
 		System.out.println("Berjalan ke arah F " + arah);
 	}
 	
 	public void berjalan(String arah, int kecepatan) {
-		bahanBakar -= 10;
+		//bahanBakar -= 10;
 		this.kecepatan += kecepatan;
 		System.out.println("Berjalan ke arah " + arah);
 	}
 	
+	@Override
 	public void rem() {
 		kecepatan -= 5;
-		bahanBakar -= 3;
+		//bahanBakar -= 3;
 	}
 }
