@@ -58,5 +58,15 @@ public class FirstApp {
 		Kendaraan mobilNola = new Kendaraan();
 		mobilNola.setBahanBakar(120);
 		System.out.println(mobilNola.jumlahKendaraan);
+		
+		
+		BahanBakar bensin = new Bensin();
+		BahanBakar avtur = new Avtur();
+		BahanBakar premium = new Premium();
+		
+		Kendaraan k = new Kendaraan();
+		k.setBahanBakar(bensin);
+		k.setBahanBakar(avtur);
+		k.setBahanBakar(premium);
 	}
 }
