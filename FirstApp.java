@@ -47,5 +47,16 @@ public class FirstApp {
 		System.out.println(kd.getKecepatan());
 		kd.rem();
 		System.out.println(kd.getKecepatan());
+		
+		
+		// Static
+		Kendaraan mobilBilly = new Kendaraan(); // jumlahKendaraan = 1
+		mobilBilly.setBahanBakar(100);
+		System.out.println(mobilBilly.jumlahKendaraan);
+		mobilBilly.jumlahKendaraan = 10;
+		
+		Kendaraan mobilNola = new Kendaraan();
+		mobilNola.setBahanBakar(120);
+		System.out.println(mobilNola.jumlahKendaraan);
 	}
 }
