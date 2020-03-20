@@ -1,0 +1,49 @@
+package first;
+
+public class Kendaraan {
+	// State
+	private double bahanBakar;
+	private double kecepatan;
+	
+	// 
+	private String mesin;
+	private String knalpot;
+	
+	public double getBahanBakar() {
+		return bahanBakar;
+	}
+
+	public void setBahanBakar(double bahanBakar) {
+		this.bahanBakar = bahanBakar;
+	}
+
+	public String getMesin() {
+		return mesin;
+	}
+
+	public void setMesin(String mesin) {
+		this.mesin = mesin;
+	}
+
+	public String getKnalpot() {
+		return knalpot;
+	}
+
+	public void setKnalpot(String knalpot) {
+		this.knalpot = knalpot;
+	}
+
+	public double getKecepatan() {
+		return kecepatan;
+	}
+
+	public void berjalan() {
+		bahanBakar -= 10;
+		kecepatan += 10;
+	}
+	
+	public void rem() {
+		kecepatan -= 5;
+		bahanBakar -= 3;
+	}
+}
