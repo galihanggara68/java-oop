@@ -27,5 +27,25 @@ public class FirstApp {
 		person.makan("Bakso");
 		String kataKata = person.berbicaraSatuKata("Makan");
 		System.out.println(kataKata);
+		
+		
+		KendaraanDarat kd = new KendaraanDarat();
+		kd.setBahanBakar(100);
+		kd.setKnalpot("Akrapovic");
+		kd.setMesin("V8");
+		kd.setKopling("Kopling Elektrik");
+		kd.setPosisiGigi(0);
+		kd.setRoda("Michellin");
+		kd.setRodaBocor(false);
+		kd.setSpion("BBS");
+		
+		
+		kd.berjalan();
+		System.out.println(kd.getKecepatan());
+		kd.berjalan();
+		kd.displayRpm();
+		System.out.println(kd.getKecepatan());
+		kd.rem();
+		System.out.println(kd.getKecepatan());
 	}
 }
