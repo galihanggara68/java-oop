@@ -2,12 +2,35 @@ package first;
 
 public class Kendaraan {
 	// State
-	private double bahanBakar;
-	private double kecepatan;
+	protected double bahanBakar;
+	protected double kecepatan;
+	
+	public static int jumlahKendaraan;
 	
 	// 
 	private String mesin;
 	private String knalpot;
+	
+	// Constructor -> Overloadable
+	// Default return type -> void
+	public Kendaraan() {
+		jumlahKendaraan += 1;
+		bahanBakar = 100;
+		kecepatan = 0;
+		
+		mesin = "V8";
+	}
+	
+	public Kendaraan(String mesin) {
+		bahanBakar = 100;
+		kecepatan = 0;
+		
+		this.mesin = mesin;
+	}
+	
+	public Kendaraan(String mesin, String knalpot) {
+		
+	}
 	
 	public double getBahanBakar() {
 		return bahanBakar;
@@ -40,6 +63,31 @@ public class Kendaraan {
 	public void berjalan() {
 		bahanBakar -= 10;
 		kecepatan += 10;
+	}
+	
+	// Overload
+	public void berjalan(String arah) {
+		bahanBakar -= 10;
+		kecepatan += 10;
+		System.out.println("Berjalan ke arah " + arah);
+	}
+	
+	public void berjalan(int arah) {
+		bahanBakar -= 10;
+		kecepatan += 10;
+		System.out.println("Berjalan ke arah I " + arah);
+	}
+	
+	public void berjalan(float arah) {
+		bahanBakar -= 10;
+		kecepatan += 10;
+		System.out.println("Berjalan ke arah F " + arah);
+	}
+	
+	public void berjalan(String arah, int kecepatan) {
+		bahanBakar -= 10;
+		this.kecepatan += kecepatan;
+		System.out.println("Berjalan ke arah " + arah);
 	}
 	
 	public void rem() {
