@@ -1,0 +1,59 @@
+package first;
+
+public class KendaraanDarat extends Kendaraan{
+	private String roda;
+	private String spion;
+	private String kopling;
+	
+	private boolean rodaBocor;
+	private int posisiGigi;
+	private int rpm;
+	
+	public String getRoda() {
+		return roda;
+	}
+
+	public void setRoda(String roda) {
+		this.roda = roda;
+	}
+
+	public String getSpion() {
+		return spion;
+	}
+
+	public void setSpion(String spion) {
+		this.spion = spion;
+	}
+
+	public String getKopling() {
+		return kopling;
+	}
+
+	public void setKopling(String kopling) {
+		this.kopling = kopling;
+	}
+
+	public boolean isRodaBocor() {
+		return rodaBocor;
+	}
+
+	public void setRodaBocor(boolean rodaBocor) {
+		this.rodaBocor = rodaBocor;
+	}
+
+	public int getPosisiGigi() {
+		return posisiGigi;
+	}
+
+	public void setPosisiGigi(int posisiGigi) {
+		this.posisiGigi = posisiGigi;
+	}
+
+	public int getRpm() {
+		return rpm;
+	}
+	
+	public void displayRpm() {
+		System.out.println(rpm);
+	}
+}
